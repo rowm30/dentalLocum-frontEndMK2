@@ -1,0 +1,10 @@
+<form [formGroup]="detailsForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="practiceName" placeholder="Practice Name" required>
+  <input type="text" formControlName="practiceType" placeholder="Practice Type" required>
+  <input type="text" formControlName="corporateOrIndependent" placeholder="Corporate or Independent" required>
+  <input type="time" formControlName="arriveBy" placeholder="Arrive By" required>
+  <input type="time" formControlName="leaveAt" placeholder="Leave At" required>
+  <input type="text" formControlName="lunchDuration" placeholder="Lunch Duration" required>
+  <input type="number" formControlName="clinicId" placeholder="Clinic ID" required>
+  <button type="submit" [disabled]="!detailsForm.valid">Submit</button>
+</form>

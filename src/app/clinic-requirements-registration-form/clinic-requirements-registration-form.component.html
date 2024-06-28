@@ -1,0 +1,39 @@
+<form [formGroup]="requirementsForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="clinicId">Clinic ID:</label>
+    <input id="clinicId" type="text" formControlName="clinicId">
+  </div>
+  <div>
+    <label for="locumTypeSelect">Locum Type:</label>
+    <select id="locumTypeSelect" formControlName="locumType">
+      <option value="Dentist">Dentist</option>
+      <option value="Nurse">Nurse</option>
+      <option value="Hygienist">Hygienist</option>
+    </select>
+  </div>
+  <div>
+    <label for="startTime">Start Time:</label>
+    <input id="startTime" type="time" formControlName="startTime">
+  </div>
+  <div>
+    <label for="endTime">End Time:</label>
+    <input id="endTime" type="time" formControlName="endTime">
+  </div>
+  <div>
+    <label for="daySelect">Day:</label>
+    <select id="daySelect" formControlName="day">
+      <option value="MONDAY">Monday</option>
+      <option value="TUESDAY">Tuesday</option>
+      <option value="WEDNESDAY">Wednesday</option>
+      <option value="THURSDAY">Thursday</option>
+      <option value="FRIDAY">Friday</option>
+      <option value="SATURDAY">Saturday</option>
+      <option value="SUNDAY">Sunday</option>
+    </select>
+  </div>
+  <div>
+    <label for="hourlyRate">Hourly Rate (£):</label>
+    <input id="hourlyRate" type="number" formControlName="hourlyRate">
+  </div>
+  <button type="submit">Register Requirement</button>
+</form>

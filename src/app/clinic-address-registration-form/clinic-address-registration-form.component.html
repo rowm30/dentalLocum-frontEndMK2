@@ -1,0 +1,8 @@
+<form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="line1" placeholder="Address Line 1" required>
+  <input type="text" formControlName="line2" placeholder="Address Line 2">
+  <input type="text" formControlName="town" placeholder="Town" required>
+  <input type="text" formControlName="postcode" placeholder="Postcode" required>
+  <input type="number" formControlName="clinicId" placeholder="Clinic ID" required>
+  <button type="submit" [disabled]="!addressForm.valid">Submit</button>
+</form>

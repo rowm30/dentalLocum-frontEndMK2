@@ -1,0 +1,12 @@
+<form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+  <label for="methodType">Payment Method Type:</label>
+  <input id="methodType" type="text" formControlName="methodType">
+
+  <label for="details">Details:</label>
+  <input id="details" type="text" formControlName="details">
+
+  <label for="clinicId">Clinic ID:</label>
+  <input id="clinicId" type="text" formControlName="clinicId">
+
+  <button type="submit">Submit</button>
+</form>

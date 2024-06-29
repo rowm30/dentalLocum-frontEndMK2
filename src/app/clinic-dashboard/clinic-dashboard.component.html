@@ -1,0 +1,31 @@
+<div class="clinic-dashboard">
+  <div class="profile-section">
+    <img src="path-to-your-profile-picture.jpg" alt="Profile Picture" class="profile-pic">
+    <button (click)="viewProfile()">View Profile</button>
+  </div>
+
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Day</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Hourly Rate</th>
+      <th>Locum Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let req of requirements">
+      <td>{{ req.id }}</td>
+      <td>{{ req.day }}</td>
+      <td>{{ req.startTime }}</td>
+      <td>{{ req.endTime }}</td>
+      <td>{{ req.hourlyRate }}</td>
+      <td>{{ req.locumType }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <button (click)="registerNewRequirement()" class="register-btn">Register New Requirement</button>
+</div>

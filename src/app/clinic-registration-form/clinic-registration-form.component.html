@@ -1,4 +1,9 @@
 <form [formGroup]="clinicForm" (ngSubmit)="onSubmit()">
+  <h2>Add Clinic Details</h2>
+  <div>
+    <label for="clinicName">Clinic Name:</label>
+    <input id="clinicName" type="text" formControlName="clinicName">
+  </div>
   <div>
     <label for="firstName">First Name:</label>
     <input id="firstName" type="text" formControlName="firstName">

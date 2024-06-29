@@ -13,15 +13,17 @@ import {
 } from "./clinic-payment-method-registration-form/clinic-payment-method-registration-form.component";
 import {
   ClinicRequirementsRegistrationFormComponent
-} from "./clinic-requirements-registration-form/clinic-requirements-registration-form.component"; // Assuming you have a HomeComponent
+} from "./clinic-requirements-registration-form/clinic-requirements-registration-form.component";
+import {ClinicDashboardComponent} from "./clinic-dashboard/clinic-dashboard.component"; // Assuming you have a HomeComponent
 
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent } ,
-  { path: 'register-clinic', component: ClinicRegistrationFormComponent },
-  { path: 'register-clinic-address', component: ClinicAddressRegistrationFormComponent},
-  { path: 'practice-details-registration', component: ClinicPracticeDetailsRegistrationFormComponent},
-  { path: 'payment-registration', component: ClinicPaymentMethodRegistrationFormComponent },
-  { path: 'register-requirement', component:ClinicRequirementsRegistrationFormComponent}
+  { path: 'login', component: LoginComponent, data: { animation: 'LoginPage' } },
+  { path: 'home', component: HomeComponent, data: { animation: 'HomePage' } },
+  { path: 'register-clinic', component: ClinicRegistrationFormComponent, data: { animation: 'ClinicFormPage' } },
+  { path: 'register-clinic-address', component: ClinicAddressRegistrationFormComponent, data: { animation: 'ClinicAddressPage' }},
+  { path: 'practice-details-registration', component: ClinicPracticeDetailsRegistrationFormComponent, data: { animation: 'PracticeDetailsPage' }},
+  { path: 'payment-registration', component: ClinicPaymentMethodRegistrationFormComponent, data: { animation: 'PaymentMethodPage' }},
+  { path: 'register-requirement', component: ClinicRequirementsRegistrationFormComponent, data: { animation: 'RequirementPage' }},
+  { path: 'clinic-dashboard', component: ClinicDashboardComponent, data: { animation: 'ClinicDashboardPage' }},
 ];
